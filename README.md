@@ -1,1 +1,789 @@
-# iindexx.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jadwal & Prediksi Akurat RAGAM4D">
+<title>RAGAM4D - Jadwal & Prediksi Akurat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#050505;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:30px;
+    text-align:center;
+
+    background:rgba(0,0,0,9.9);
+    border-bottom:2px solid gold;
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 40px rgba(255,215,0,0.4);
+
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo-ragam{
+    width:290px;
+
+}
+
+@keyframes blinkGlow{
+
+    from{
+        filter:
+        drop-shadow(0 0 100px gold)
+        drop-shadow(0 0 20px gold);
+    }
+
+    to{
+        filter:
+        drop-shadow(0 0 25px #00aaff)
+        drop-shadow(0 0 45px gold);
+    }
+}
+
+@keyframes floatLogo{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* HERO */
+
+.hero{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:80px 15px 50px;
+
+    margin-bottom:50px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1800');
+
+    background-size:cover;
+    background-position:center;
+
+    border-bottom:2px solid gold;
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,0.4);
+
+}
+
+.hero h1{
+
+    font-size:85px;
+    color:#fafa16;
+	margin-bottom:4w0px;
+
+    text-shadow:
+    0 0 10px #000000,
+    0 0 10px #000000,
+    0 0 20px #000000;
+
+    animation:
+    heroGlow 1.5s infinite alternate,
+    floatText 2s ease-in-out infinite;
+
+}
+
+@keyframes floatText{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-40px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes heroGlow{
+
+    from{
+        text-shadow:
+        0 0 5px #000000,
+        0 0 5px #000000;
+    }
+
+    to{
+        text-shadow:
+        0 0 100px #000000,
+        0 0 5px #000000,
+        0 0 10px #000000;
+    }
+}
+
+.hero p{
+    margin-top:32px;
+    font-size:22px;
+	   font-weight:550;
+    color:#0f0f0f;
+    letter-spacing:2px;
+	
+		background:linear-gradient(to right,gold,#fff305);
+	padding:8px 80px;
+	border-radius:40px;
+    animation:blink 1s infinite;
+    text-decoration:none;
+	
+}
+
+/* BUTTONS */
+
+.top-buttons{
+    margin-top:10px;
+	
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:5px 20px;
+
+    margin:20px;
+
+    border-radius:80px;
+
+    text-decoration:none;
+
+    font-weight:750;
+
+    transition:0.2s;
+
+    border:1px solid gold;
+
+    animation:pulseBtn 1.0s infinite;
+
+}
+
+@keyframes pulseBtn{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:
+        0 0 0px gold,
+        0 0 20px rgba(255,215,0,0.3);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        box-shadow:
+        0 0 0px gold,
+        0 0 10px gold,
+        0 0 60px rgba(255,215,0,0.8);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:
+        0 0 10px gold,
+        0 0 20px rgba(255,215,0,0.3);
+
+    }
+
+}
+
+.login-btn{
+    background:gold;
+    color:black;
+}
+
+.tele-btn{
+    background:#0099ff;
+    color:black;
+}
+
+.parlay-btn{
+
+    background:gold;
+
+    color:black;
+
+    border:2px solid gold;
+
+}
+.btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 40px gold;
+}
+
+/* CONTAINER */
+
+.container{
+    width:95%;
+    max-width:1600px;
+    margin:auto;
+    padding-bottom:60px;
+}
+
+/* MATCH GRID */
+
+.matches{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* MATCH CARD */
+
+.match{
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85));
+
+    border:3px solid #ffd700;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:
+    0 0 15px rgba(255,215,0,0.5),
+    0 0 30px rgba(255,215,0,0.25);
+
+    transition:0.3s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.match::before{
+    content:'';
+
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,215,0,0.15),
+    transparent);
+
+    transition:0.7s;
+}
+
+.match:hover::before{
+    left:100%;
+}
+
+.match:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 0 25px gold,
+    0 0 50px rgba(255,215,0,0.4);
+}
+
+.live{
+    color:red;
+    font-weight:bold;
+    animation:liveblink 1s infinite;
+}
+
+@keyframes liveblink{
+    50%{
+        opacity:0.3;
+    }
+}
+
+.teams{
+    font-size:34px;
+    font-weight:800;
+    color:white;
+
+    margin-bottom:18px;
+
+    text-shadow:0 0 10px rgba(255,215,0,0.5);
+}
+
+.info{
+    font-size:18px;
+    margin-bottom:10px;
+
+    padding:10px 14px;
+
+    border-left:4px solid gold;
+
+    background:rgba(255,215,0,0.08);
+
+    border-radius:10px;
+}
+
+.prediksi{
+    margin-top:18px;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:rgba(0,255,140,0.12);
+
+    border:2px solid #00ff95;
+
+    color:#00ff95;
+
+    font-weight:700;
+
+    box-shadow:
+    0 0 12px rgba(0,255,140,0.3);
+}
+
+.odds{
+    margin-top:18px;
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    background:#1a1a1a;
+
+    border-radius:12px;
+
+    color:#ffd700;
+
+    font-weight:700;
+
+    border:2px solid gold;
+
+    animation:oddsBlink 1s infinite alternate;
+}
+
+@keyframes oddsBlink{
+
+    from{
+        box-shadow:0 0 10px gold;
+    }
+
+    to{
+        box-shadow:
+        0 0 20px gold,
+        0 0 40px gold;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:20px;
+
+    background:rgba(0,0,0,0.85);
+
+    border-top:2px solid gold;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    box-shadow:
+    0 0 15px gold;
+}
+
+.footer-text{
+    margin-top:5px;
+    font-size:12px;
+    color:#ffd700;
+    letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .matches{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .teams{
+        font-size:28px;
+    }
+
+}
+
+/* RESPONSIVE HP */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .logo-ragam{
+        width:200px;
+    }
+
+    .matches{
+        grid-template-columns:1fr;
+    }
+
+    .match{
+        padding:20px;
+    }
+
+    .teams{
+        font-size:24px;
+    }
+
+    .info{
+        font-size:15px;
+    }
+
+    .btn{
+
+        display:block;
+
+        width:90%;
+
+        margin:15px auto;
+
+        text-align:center;
+
+    }
+
+    .container{
+        width:100%;
+        padding:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="https://i.ibb.co/k65ss7p5/DOmv-SO2-d.webp" class="logo-ragam">
+
+</header>
+
+<section class="hero">
+
+    <h1>JADWAL & PREDIKSI </h1>
+
+    <p>
+        • WINRATE TINGGI • ODDS PREMIUM • UPDATE HARIAN •
+    </p>
+
+    <div class="top-buttons">
+
+        <a href="https://ragamsaka.com/" class="btn login-btn">
+            LOGIN WEBSITE
+        </a>
+
+        <a href="https://t.me/boneee14" class="btn tele-btn">
+            JOIN TELEGRAM
+        </a>
+		
+		<a href="https://link-parlay-lu.com" class="btn parlay-btn">
+    KALKULATOR PARLAY
+</a>
+
+    </div>
+
+</section>
+
+<div class="container">
+
+<div class="matches">
+
+<!-- MATCH 1 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI )
+</div>
+<div class="teams"> Brighton vs Manchester Utd </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Brighton -0.5 (bett) </div>
+<div class="info">O/U : 3/3.5 </div>
+<div class="prediksi">Prediksi Score : 2 - 1</div>
+<div class="odds">LIVE ODDS :1.12  🔥</div>
+</div>
+
+<!-- MATCH 2 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI )
+</div>
+<div class="teams"> Burnley vs Wolverhampton </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Burnley (bett)  +0/0.5 </div>
+<div class="info">O/U : 2.5/3 </div>
+<div class="prediksi">Prediksi Score : 1 - 1 </div>
+<div class="odds">LIVE ODDS : 1.25 🔥</div>
+</div>
+
+<!-- MATCH 3 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI )
+</div>
+<div class="teams"> Crystal Palace vs Arsenal </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Crystal Palac +0.5/1 (bett)  </div>
+<div class="info">O/U : 2.5/3 </div>
+<div class="prediksi">Prediksi Score : 2 - 1</div>
+<div class="odds">LIVE ODDS : 1.30 🔥</div>
+</div>
+
+<!-- MATCH 4 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI ) 
+</div>
+<div class="teams"> Fulham vs Newcastle </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Newcastle -0/0.5 (bett)  </div>
+<div class="info">O/U : 3 </div> 
+<div class="prediksi">Prediksi Score : 0 - 2</div>
+<div class="odds">LIVE ODDS : 1.36 🔥</div>
+</div>
+
+<!-- MATCH 5 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI ) 
+</div>
+<div class="teams"> Liverpool vs Brentford </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Brentford +0.5 (bett)  </div>
+<div class="info">O/U : 3 </div>
+<div class="prediksi">Prediksi Score :2 - 2 </div>
+<div class="odds">LIVE ODDS : 1.27 🔥</div>
+</div>
+
+<!-- MATCH 6 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI ) 
+</div>
+<div class="teams"> Manchester City vs Aston Villa </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP :Aston Villa +1.5/2 (bett) </div>
+<div class="info">O/U : 3.5/4 </div>
+<div class="prediksi">Prediksi Score : 1 - 2</div>
+<div class="odds">LIVE ODDS : 1.27 🔥</div>
+</div>
+
+<!-- MATCH 7 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI )
+</div>
+<div class="teams"> Nottingham Forest vs Bournemouth </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Bournemouth -0/0.5 (bett) </div>
+<div class="info">O/U : 2/2.5 </div>
+<div class="prediksi">Prediksi Score : 1 - 3</div>
+<div class="odds">LIVE ODDS : 1.09 🔥</div>
+</div>
+
+<!-- MATCH 8 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI )
+</div>
+<div class="teams"> Sunderland vs  Chelsea </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Chelsea -0.5 (bett) </div>
+<div class="info">O/U : 2.5/3 </div>
+<div class="prediksi">Prediksi Score : 0 - 2</div>
+<div class="odds">LIVE ODDS : 1.04 🔥</div>
+</div>
+
+<!-- MATCH 9 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 May / 22:00 PM ) 
+</div>
+<div class="teams"> Tottenham vs Everton </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Everton +0.5 (bett) </div>
+<div class="info">O/U : 2.5/3 </div>
+<div class="prediksi">Prediksi Score : 1 - 1</div>
+<div class="odds">LIVE ODDS : 1.02 🔥</div>
+</div>
+
+<!-- MATCH 10 -->
+<div class="match">
+<div class="live">
+● MATCH Premier League ( 24 MEI )
+</div>
+<div class="teams"> West Ham vs Leeds  </div>
+<div class="info">Kick Off : 22:00 PM </div>
+<div class="info">HDP : Leeds +0.5 (bett) </div>
+<div class="info">O/U : </div>
+<div class="prediksi">Prediksi Score : 0 - 1 </div>
+<div class="odds">LIVE ODDS : 1.01 🔥</div>
+</div>
+
+<!-- MATCH 11 -->
+<div class="match">
+<div class="live">
+● MATCH Serie A ( 24 MEI )
+</div>
+<div class="teams"> Parma vs Sassuolo </div>
+<div class="info">Kick Off : 20:00 PM  </div>
+<div class="info">HDP : Sassuolo 0 (bett) </div>
+<div class="info">O/U : 2.5 </div>
+<div class="prediksi">Prediksi Score : 0 - 2 </div>
+<div class="odds">LIVE ODDS : 1.09🔥</div>
+</div>
+
+<!-- MATCH 12 -->
+<div class="match">
+<div class="live">
+● MATCH Serie A ( 24 MEI ) 
+</div>
+<div class="teams"> Napoli vs Udinese </div>
+<div class="info">Kick Off : 23:00 PM </div>
+<div class="info">HDP : Udinese +1 (bett) </div>
+<div class="info">O/U : 2.5 </div>
+<div class="prediksi">Prediksi Score : 1 - 1</div>
+<div class="odds">LIVE ODDS : 1.06 🔥</div>
+</div>
+
+<!-- MATCH 13 -->
+<div class="match">
+<div class="live">
+● MATCH La Liga ( 24 MEI )
+</div>
+<div class="teams"> Real Betis(N) vs Levante </div>
+<div class="info">Kick Off : 02:00 AM </div>
+<div class="info">HDP : Real Betis -0/0.5 (bett) </div>
+<div class="info">O/U : 2.5/3 </div>
+<div class="prediksi">Prediksi Score : 3 - 2</div>
+<div class="odds">LIVE ODDS : 1.08 🔥</div>
+</div>
+
+<!-- MATCH 14 -->
+<div class="match">
+<div class="live">
+● MATCH La Liga ( 24 MEI ) 
+</div>
+<div class="teams">  Real Madrid  vs Ath.Bilbao </div>
+<div class="info">Kick Off : 02:00 AM</div>
+<div class="info">HDP : Real Madrid -1/1.5 (bett) </div>
+<div class="info">O/U : 5.5 </div>
+<div class="prediksi">Prediksi Score : 3 - 0</div>
+<div class="odds">LIVE ODDS :1.07  🔥</div>
+</div>
+
+<!-- MATCH 15 -->
+<div class="match">
+<div class="live">
+● MATCH La Liga ( 24 MEI ) 
+</div>
+<div class="teams"> Valencia vs Barcelona </div>
+<div class="info">Kick Off : 02:00 AM</div>
+<div class="info">HDP : Barcelona 0.5/1 (bett) </div>
+<div class="info">O/U : 3/3.5 </div>
+<div class="prediksi">Prediksi Score : 1 - 4</div>
+<div class="odds">LIVE ODDS : 1.13 🔥</div>
+</div>
+
+<!-- MATCH 16 -->
+<div class="match">
+<div class="live">
+● MATCH La Liga ( 24 MEI ) 
+</div>
+<div class="teams"> Espanyol vs Real Sociedad </div>
+<div class="info">Kick Off : 02:00 AM </div>
+<div class="info">HDP : Espanyol +0/0.5 (bett) </div>
+<div class="info">O/U : 2/2.5 </div>
+<div class="prediksi">Prediksi Score : 1 - 1</div>
+<div class="odds">LIVE ODDS : 1.67 🔥</div>
+</div>
+
+
+</div>
+</div>
+
+<footer>
+
+<div>
+JOIN NOW
+</div>
+
+  <a href="https://ertepe.luvtoberi.com/index.html?rtp=ragam4d/">
+
+    <img src="https://i.ibb.co/k65ss7p5/DOmv-SO2-d.webp" class="logo-ragam">
+
+    <div class="footer-text">
+        © 2026 RAGAM4D • JADWAL & PREDIKSI AKURAT
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
